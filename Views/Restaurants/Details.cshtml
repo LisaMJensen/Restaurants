@@ -8,11 +8,12 @@
 <hr />
 <h3>@Html.DisplayFor(model => model.Name):</h3> 
 <ul>
-<li><b>Species:</b> @Html.DisplayFor(model => model.RestaurantId)</li>
-<li><b>Gender:</b> @Html.DisplayFor(model => model.Name)</li>
-<li><b>Breed:</b> @Html.DisplayFor(model => model.Location)</li>
-<li><b>Date Admitted:</b> @Html.DisplayFor(model => model.Rating)</li>
+<li><b>RestaurantId:</b> @Html.DisplayFor(model => model.RestaurantId)</li>
+<li><b>Name:</b> @Html.DisplayFor(model => model.Name)</li>
+<li><b>Location:</b> @Html.DisplayFor(model => model.Location)</li>
+<li><b>Rating:</b> @Html.DisplayFor(model => model.Rating)</li>
 </ul>
 
-<p>@Html.ActionLink("Edit Item", "Edit", new { id = Model.ItemId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
+<p>@Html.ActionLink("Edit Restaurant", "Edit", new { id = Model.RestaurantId })</p>
+<p>@Html.ActionLink("Delete Restaurant", "Delete", new { id = Model.RestaurantId })</p>
