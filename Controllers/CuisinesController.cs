@@ -19,6 +19,7 @@ namespace RestaurantCatalog.Controllers
         {
             List<Cuisine> model = _db.Cuisines.ToList();
             return View(model);
+
         }
 
         public ActionResult Create()

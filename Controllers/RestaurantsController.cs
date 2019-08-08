@@ -7,19 +7,20 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace RestaurantCatalog.Controllers
 {
-    public class RestaurantController : Controller
+    public class RestaurantsController : Controller
     {
         private readonly RestaurantCatalogContext _db;
 
-        public RestaurantController(RestaurantCatalogContext db)
+        public RestaurantsController(RestaurantCatalogContext db)
         {
             _db = db;
         }
 
         public ActionResult Index()
         {
-            List<Restaurant> model = _db.Restaurants.Include(restaraunts => restaraunts.Cuisine).ToList();
+            List<Restaurant> model = _db.Restaurants.Include(restaurants => restaurants.Cuisine).ToList();
             return View(model);
+
         }
 
         public ActionResult Create()
